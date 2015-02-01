@@ -1,0 +1,507 @@
+<!doctype html>
+
+<!--
+ 
+      Theme: Seriouser v0.1
+      Author: Leon Paternoster  [http://leonpaternoster.com]
+      For: Tumblr  [http://tumblr.com/]
+      Terms: Protected under Creative Commons. [http://creativecommons.org/licenses/by-nc/3.0/]
+  
+-->
+
+<html lang="en">
+
+	<head>
+
+		<meta charset="UTF-8">
+	
+		<meta name=viewport content='width=device-width, initial-scale=1'>	
+	    
+		<!-- Custom Variables -->
+		<meta name="image:Logo" content=""/>
+		<meta name="text:Colophon" content="Seriouser theme by Leon Paternoster"/>
+		<meta name="color:Background" content="#fff"/>
+		<meta name="color:Text" content="#444"/>
+		<meta name="color:Link" content="#09b"/>
+		<meta name="color:Visited" content="#888"/>
+		<meta name="color:Hover" content="#fd9000"/>
+	
+		<title>{Title}{block:PostSummary} &ndash; {PostSummary}{/block:PostSummary}</title>
+	
+		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+	
+		<link rel="shortcut icon" href="{Favicon}">
+		<link rel="apple-touch-icon" href="{PortraitURL-128}">
+		<link rel="alternate" type="application/rss+xml" href="{RSS}">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/buttons-min.css&pure/0.5.0/forms-min.css&pure/0.5.0/tables-min.css">
+	
+		<script>
+			WebFontConfig = {
+			google: { families: [ 'PT+Serif:400,400italic,700:latin' ] }
+			};
+			(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+	
+	
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	
+		<style>
+		
+			body, ul, ol, p, h1, h2, h3, h4, h5, h6, fieldset, dd, figure, figcaption, main { margin: 0; padding: 0; }
+			article, aside, dialog, figure, figcaption, footer, header, hgroup, nav, section, main { display: block; }
+	      
+			body {
+				color: {color:Text};
+				background: {color:Background};
+				font-family: 'PT Serif', Georgia, serif;
+				margin: 1.4em auto;
+				font-size: 118.75%;
+				line-height: 1.4737em;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			a:link,
+			a:visited {
+				color: {color:Link};
+			}
+			
+			a:hover,
+			a:active,
+			a:focus {
+				color: {color:Hover};
+			}
+			
+			.wrapper {
+				max-width: 34em;
+				margin: 0 auto;
+				padding: 0 1.4em;
+			}
+			
+			.hide {
+				position: absolute !important;
+				clip: rect(1px 1px 1px 1px);
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+			
+			.clearfix:before,
+			.clearfix:after {
+				content: "";
+				display: block;
+			}
+			 
+			.clearfix:after {
+				clear: both;
+			}
+			
+			.clearfix {
+				zoom: 1;
+			}
+			
+			.secondary {
+				color: #888;
+			}
+			
+			.inline-list li {
+				display: inline;
+				margin-right: 1.4737em;
+			}
+			
+			.previous {
+				float: left;
+				width: 45%;
+			}
+			
+			.next {
+				float: right;
+				width: 45%;
+				text-align: right;
+			}
+			
+			.constrain {
+				position: relative;
+				padding-bottom: 56.25%; /* 16:9 */
+				padding-top: 25px;
+				height: 0;
+			}
+			
+			
+			.constrain iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100% !important;
+				height: 100% !important;
+			}
+			
+			#banner {
+				padding: 1.4737em 0 2.9474em 0;
+			}
+			
+				.site-title {
+					font-size: 1em;
+					font-weight: normal;
+					text-transform: lowercase;
+					font-variant: small-caps;
+					letter-spacing: 2px;
+					margin-bottom: 0.2105em;
+					padding-bottom: 0.2105em;
+					border-bottom: 1px dotted #000;
+				}
+				
+				.site-description {
+					font-size: 0.875em;
+					line-height: 1.203em;
+					font-style: italic;
+				}
+				
+			.post {
+				padding-bottom: 2.9474em;
+			}
+			
+				.post-title {
+					font-size: 1.3333em;
+					line-height: 1.2632em;
+					margin-bottom: 0.1579em;
+					font-weight: normal;
+					font-style: italic;
+					color: #000;
+				}
+				
+					.link-label {
+						text-transform: lowercase;
+						font-variant: small-caps;
+						font-style: normal;
+					}
+				
+				.post-content p,
+				.post-content ul,
+				.post-content ol {
+					margin-bottom: 0.6316em;
+				}
+				
+				.post-content a {
+					border-bottom: 1px dotted #000;
+				}
+				
+				.post-content a:link {
+					color: {color:Link};
+				}
+				
+				.post-content a:visited {
+					color: {color:Visited};
+				}
+				
+				.post-content a:hover,
+				.post-content a:active,
+				.post-content a:focus {
+					color: {color:Hover};
+				}
+				
+				.post img {
+					width: auto !important;
+					max-width: 100% !important;
+					height: auto !important;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+					border: 1px solid #CFCFCF;
+				}
+				
+				.post figcaption p {
+					font-size: 0.875em;
+					color: #888;
+					line-height: 1.203em;
+					margin-bottom: 0.7218em;
+				}
+				
+				.post blockquote {
+					margin:  1.4737em 0 1.4737em 1.895em;
+					padding: 0 0 0 0.8421em;
+					border-left: 0.2105em solid #888;
+				}
+				
+				.post video {
+				  width: 100% !important;
+				  height: auto !important;
+				}
+				
+				.post-footer {
+					font-style: italic;
+					font-size: 0.875em;
+					line-height: 1.203em;
+				}
+				
+				.post-footer p {
+					margin-bottom: 0.2406em;
+				}
+				
+				.page-numbers {
+					text-align: center;
+				}
+				
+			#site-footer {
+				padding-top: 1.4737em;
+			}
+			
+				#site-footer p,
+				#site-footer ul,
+				#site-footer ol {
+					font-size: 0.875em;
+					line-height: 1.203em;
+				}
+			  
+			{CustomCSS}
+			
+		</style>
+	
+	</head>
+
+	<body>
+	
+		<div id="accessibility" class="hide">
+		
+			<ul>
+			
+				<li><a href="content">Skip to content</a></li>
+				<li><a href="nav">Skip to list of pages</a></li>
+				
+			</ul>
+			
+		</div>
+
+		<header id="banner" role="banner">
+		
+			<div class="wrapper">
+
+				{block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
+			
+				<h1 class="site-title"><a href="/">{Title}</a></h1>
+			
+				{block:Description}<p class="site-description secondary">{Description}</p>{/block:Description}
+				
+			</div> <!-- end .wrapper -->
+			
+		</header>
+
+			<main id="content" role="main">
+			
+				<div class="wrapper">
+				
+					<div class="posts">
+				
+						{block:NoSearchResults}
+							<h1 class="post-title">Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
+						{/block:NoSearchResults}
+
+						{block:TagPage}
+							<h1 class="post-title">#{Tag}</h1>
+						{/block:TagPage}
+
+						{block:Posts}
+					
+							<article class="post {PostType}">
+						
+								{block:Text}
+							
+									{block:Title}
+										<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>
+									{/block:Title}
+							
+									<div class="post-content">
+									
+										{Body}
+							
+										{block:More}<p><a href="{Permalink}">Read More &raquo;</a></p>{/block:More}
+										
+									</div>
+							
+								{/block:Text}
+
+								{block:Photo}
+							
+									<figure class="image">
+							
+										{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}
+
+										<figcaption>{block:Caption}{Caption}{/block:Caption}</figcaption>
+									
+									</figure>
+								
+								{/block:Photo}
+
+								{block:Photoset}
+							
+									{Photoset}
+
+									<figcaption>{block:Caption}{Caption}{/block:Caption}</figcaption>
+								
+								{/block:Photoset}
+
+								{block:Quote}
+							
+									<blockquote>
+								
+										<p>{Quote}</p>
+
+										{block:Source}<p>&mdash;<cite>{Source}</cite></p>{/block:Source}
+									
+									</blockquote>
+								
+								{/block:Quote}
+
+								{block:Link}
+							
+									<h1 class="post-title"><span class="link-label">Link:</span> <a href="{URL}"{Target}>{Name}</a></h1>
+
+									<div class="post-content">
+									
+										{block:Description}{Description}{/block:Description}
+										
+									</div>
+								
+								{/block:Link}
+
+								{block:Chat}
+							
+									{block:Title}<h1 class="post-title">{Title}</h1>{/block:Title}
+									
+									<div class="post-content">
+
+										<ul>
+								
+											{block:Lines}
+									
+												<li class="{Alt}">{block:Label}<b>{Label}</b>{/block:Label}{Line}</li>
+										
+											{/block:Lines}
+									
+										</ul>
+										
+									</div>
+								
+								{/block:Chat}
+
+								{block:Audio}
+								
+									<figure class="constrain audio">
+							
+										{AudioEmbed-640}
+
+										<figcaption>{block:Caption}{Caption}{/block:Caption}</figcaption>
+										
+									</figure>
+								
+								{/block:Audio}
+
+								{block:Video}
+								
+									<figure class="constrain video">
+							
+										{VideoEmbed-700}
+
+										<figcaption>{block:Caption}{Caption}{/block:Caption}</figcaption>
+										
+									</figure>
+								
+								{/block:Video}
+
+								{block:Answer}
+								
+									<h1 class="post-title">{Asker} asked: <q>{Question}</q></h1>
+									
+									<div class="post-content">
+
+										{Answer}
+										
+									</div>
+								
+								{/block:Answer}						
+							
+								<footer class="post-footer">
+							
+									{block:Date}
+							
+									<p class="secondary"><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a>{block:RebloggedFrom}<span class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</span>{/block:RebloggedFrom}{block:ContentSource}<span class="source"> via <a href="{SourceURL}">{SourceTitle}</a></span>{/block:ContentSource}{block:PostNotes}{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} &mdash; {PostNotes-64}{/block:PostNotes}</p>
+									
+									<div class="social clearfix">
+									
+										{ReblogButton}
+										
+									</div>
+								
+									{block:PermalinkPage}
+								
+										{block:HasTags}
+									
+											<ul class="tags inline-list">
+	  										
+	  											{block:Tags}<li><a href="{TagURL}">#{Tag}</a></li>{/block:Tags}
+	  											
+	  										</ul>
+	  										
+	  									{/block:HasTags}	
+	  											
+									{/block:PermalinkPage}
+								
+								{/block:Date}
+														
+								</footer>
+							
+							</article>
+
+						{/block:Posts}
+				
+						{block:Pagination}
+					
+							<div class="pagination clearfix">
+						
+								<p class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&larr; Previous{block:PreviousPage}</a>{/block:PreviousPage}</p>
+								<p class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &rarr;{block:NextPage}</a>{/block:NextPage}</p>
+								
+								<p class="page-numbers secondary">{CurrentPage}/{TotalPages}</p>
+							
+							</div>
+						
+						{/block:Pagination}
+							
+					</div> <!-- end .posts -->
+					
+				</div> <!-- end .wrapper -->
+				
+			</div> <!-- end #content -->
+	
+		<footer id="site-footer">
+		
+			<div class="wrapper">
+		
+			  	{block:HasPages}
+			  	
+			  		<ul class="pages inline-list" role="navigation" id="nav">
+			  		
+							{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}
+			  		</ul>
+			  		
+				{/block:HasPages}
+			
+				<p class="secondary" role="contentinfo">{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled} {block:IfColophon}&ndash; {text:Colophon}{/block:IfColophon}</p>
+				
+			</div> <!-- end .wrapper -->
+			
+		</footer>
+		
+	</body>
+	
+</html>
