@@ -37,7 +37,7 @@
 	
 		<script>
 			WebFontConfig = {
-			google: { families: [ 'Source+Sans+Pro:400,400italic,700:latin' ] }
+			google: { families: [ 'PT+Serif:400,400italic,700:latin' ] }
 			};
 			(function() {
 			var wf = document.createElement('script');
@@ -63,7 +63,7 @@
 			body {
 				color: {color:Text};
 				background: {color:Background};
-				font-family: 'Source Sans Pro', sans-serif;
+				font-family: 'PT Serif', Georgia, serif;
 				margin: 1.4em auto;
 				font-size: 118.75%;
 				line-height: 1.4737em;
@@ -175,6 +175,8 @@
 					font-size: 1.3333em;
 					line-height: 1.2632em;
 					margin-bottom: 0.1579em;
+					font-weight: normal;
+					font-style: italic;
 					color: #000;
 				}
 				
@@ -249,25 +251,6 @@
 				.page-numbers {
 					text-align: center;
 				}
-
-            .avatar {
-                float: left;
-                margin-right: 0.2406em;
-                border-radius: 50%;
-                height: auto !important;
-                max-height: 1.4737em !important;
-                max-width: 100% !important;
-            }
-
-            .notes {
-                margin-bottom: 1.4737em;
-            }
-
-            .notes li {
-                clear: both;
-                padding: 0.737em 0;
-                list-style-type: none;
-            }
 				
 			#site-footer {
 				padding-top: 1.4737em;
@@ -451,7 +434,7 @@
 							
 									{block:Date}
 							
-									<p class="secondary"><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a>{block:RebloggedFrom}<span class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</span>{/block:RebloggedFrom}{block:ContentSource}<span class="source"> via <a href="{SourceURL}">{SourceTitle}</a></span>{/block:ContentSource}{block:PostNotes}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}: {PostNotes-64}{/block:PostNotes}</p>
+									<p class="secondary"><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a>{block:RebloggedFrom}<span class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</span>{/block:RebloggedFrom}{block:ContentSource}<span class="source"> via <a href="{SourceURL}">{SourceTitle}</a></span>{/block:ContentSource}{block:PostNotes}{block:NoteCount}{NoteCountWithLabel}{/block:NoteCount} &mdash; {PostNotes-64}{/block:PostNotes}</p>
 									
 									<div class="social clearfix">
 									
@@ -513,7 +496,7 @@
 			  		
 				{/block:HasPages}
 			
-				<p class="secondary" role="contentinfo">{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled} {block:IfColophon}{text:Colophon}{/block:IfColophon}</p>
+				<p class="secondary" role="contentinfo">{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled} {block:IfColophon}&ndash; {text:Colophon}{/block:IfColophon}</p>
 				
 			</div> <!-- end .wrapper -->
 			
